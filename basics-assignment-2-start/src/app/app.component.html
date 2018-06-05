@@ -5,11 +5,14 @@
   <li>Upon clicking the button, the username should be reset to an empty string</li>
 </ol>
 <hr/>
+<label>Username</label>
 <input
   type="text"
   [(ngModel)]='username'
+  class="form-control"
 >
 <p> {{ username }}</p>
 <button
   [disabled]="this.username.length == 0"
-  (click)="onSubmit()">Submit username</button>
+  (click)="onSubmit()"
+  class="btn btn-secondary">Submit username</button>
