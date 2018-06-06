@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  showPar = false;
+  array = [];
+  
+  onShowParagraph() {
+    this.showPar = !this.showPar;
+    this.array.push(this.array.length + 1);
+  }
 }
