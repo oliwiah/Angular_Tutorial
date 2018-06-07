@@ -21,7 +21,7 @@
 >Display Details</button>
 <p *ngIf="showPar">toogled paragraph</p>
 <div 
-  *ngFor="let newPar of array"
+  *ngFor="let newPar of array;"
   [ngStyle]="{backgroundColor: newPar >= 5 ? 'blue' : none}"
   [ngClass]="{'textColor': newPar >= 5}"
 >{{ newPar }}</div>
