@@ -13,9 +13,9 @@
         <li>Style the element (e.g. paragraph) holding your output text differently in both components</li>
       </ol>
 
-      <app-game-control></app-game-control>
-      <app-odd></app-odd>
-      <app-even></app-even>
+      <app-game-control (intervalStart)="onIntervalStarted($event)"></app-game-control>
+      <app-odd *ngFor="let oddNumber of oddNumbers" [number]="oddNumber"></app-odd>
+      <app-even *ngFor="let evenNumber of evenNumbers" [number]="evenNumber"></app-even>
     </div>
   </div>
 </div>
